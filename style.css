@@ -2,6 +2,8 @@
     --orange-brown: #d5864e;
     --light-brown: #b06c46;
     --font-color-black: rgba(0, 0, 0, 0.7);
+    --font: Tahoma, sans-serif;
+    --white: blanchedalmond;
 }
 
 body{
@@ -63,7 +65,7 @@ a{
     color: antiquewhite;
     font-size: large;
     text-align: center;
-    font-family: Tahoma, sans-serif;
+    font-family: var(--font);
     color: var(--font-color-black);
     font-weight: bold;
 }
@@ -84,7 +86,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Tahoma, sans-serif;
+    font-family: var(--font);
     color: var(--font-color-black);
 }
 
@@ -111,10 +113,80 @@ p{
     background-color: var(--orange-brown);
     box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form{
+    padding-left: 50px;
+}
+
+.form-section{
+    display: flex;
+    gap: 50px;
+    padding-bottom: 10px;
+    font-family: var(--font);
+    color: var(--font-color-black);
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    display: block;
+    font-size: 14px;
+}
+
+input{
+    border-radius: 3px;
+    border-color: var(--light-brown);
+    background-color: var(--white);
+    height: 20px;
+}
+
+#password1:invalid{
+    border: 2px solid red;
+}
+
+#password2:invalid{
+    border: 2px solid red;
+}
+
+#password1{
+    border: 2px solid green;
+}
+
+#password2{
+    border: 2px solid green;
 }
 
 #submit{
     height: 100%;
     width: 100%;
     background-color: var(--light-brown);
+    font-family: var(--font);
+}
+
+#submit>button{
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--white);
+    background-color: black;
+    border-color: black;
+    border-radius: 12px;
+    height: 50px;
+    width: 200px;
+    margin: 20px;
+    margin-left: 50px;
+}
+
+#submit>p{
+    margin-left: 50px;
+}
+
+#submit a{
+    color: var(--white);
 }
